@@ -27,13 +27,31 @@ const { description, title } = Astro.props
 
   <body class="relative text-black dark:text-white">
     <div
-      class="absolute top-0 bottom-0 z-[-2] min-h-screen w-full bg-gray-50 dark:bg-gray-950
+      class="absolute top-0 bottom-0 z-[-2] min-h-screen w-full bg-gray-50 dark:bg-slate-950
       bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(217,216,255,0.5),rgba(255,255,255,0.9))]
       dark:bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"
     >
     </div>
     <Header />
     <slot />
+    <!-- guidelines bg -->
+		<svg class="absolute inset-0 z-[-2] h-full w-full stroke-1 stroke-gray-700/30 dark:stroke-blue-700/30 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]" aria-hidden="true">
+			<defs>
+				<pattern id="983e3e4c-de6d-4c3f-8d64-b9761d1534cc" width="100" height="100" x="50%" y="-1" patternUnits="userSpaceOnUse">
+					<path d="M.5 200V.5H200" fill="none"></path>
+				</pattern>
+			</defs>
+			<svg x="50%" y="0" class="overflow-visible fill-gray-800/10  dark:fill-blue-800/10">
+				<path d="M-200 0h201v201h-201Z M600 0h201v201h-201Z M-400 600h201v201h-201Z M200 800h201v201h-201Z" stroke-width="0"></path>
+			</svg>
+			<svg x="50%" y="1400" class="overflow-visible fill-gray-800/10  dark:fill-blue-800/10">
+				<path d="M-200 0h201v201h-201Z M600 0h201v201h-201Z M-400 600h201v201h-201Z M200 800h201v201h-201Z" stroke-width="0" transform="scale(-1, 1)"></path>
+			</svg>
+			<svg x="50%" y="2800" class="overflow-visible fill-gray-800/10  dark:fill-blue-800/10">
+				<path d="M-200 0h201v201h-201Z M600 0h201v201h-201Z M-400 600h201v201h-201Z M200 800h201v201h-201Z" stroke-width="0"></path>
+			</svg>
+			<rect width="100%" height="100%" stroke-width="0" fill="url(#983e3e4c-de6d-4c3f-8d64-b9761d1534cc)"></rect>
+		</svg>
     <Footer />
     <style is:global>
       :root {
@@ -41,7 +59,7 @@ const { description, title } = Astro.props
       }
 
       html {
-        font-family: "Onest Variable", system-ui, sans-serif;
+        font-family: "Twemoji Country Flags", "Onest Variable", system-ui, sans-serif;
         scroll-behavior: smooth;
       }
 
@@ -111,5 +129,9 @@ const { description, title } = Astro.props
         }
       }
     </style>
+    <script type="module" defer>
+      import { polyfillCountryFlagEmojis } from "https://cdn.skypack.dev/country-flag-emoji-polyfill";
+      polyfillCountryFlagEmojis();
+    </script>
   </body>
 </html>

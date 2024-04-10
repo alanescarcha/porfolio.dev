@@ -1,0 +1,200 @@
+---
+import JS from "./icons/JS.astro"
+import HTML from "./icons/HTML.astro"
+import CSS from "./icons/CSS.astro"
+import TS from "./icons/TS.astro"
+import ExpressJS from "./icons/ExpressJS.astro"
+import JWT from "./icons/JWT.astro"
+import React from "./icons/React.astro"
+import AstroJS from "./icons/AstroJS.astro"
+import Arduino from "./icons/Arduino.astro"
+import Figma from "./icons/Figma.astro"
+import Firebase from "./icons/Firebase.astro"
+import AWS from "./icons/AWS.astro"
+import Bash from "./icons/Bash.astro"
+import Bootstrap from "./icons/Bootstrap.astro"
+import Cloudflare from "./icons/Cloudflare.astro"
+import Docker from "./icons/Docker.astro"
+import Git from "./icons/Git.astro"
+import GitHub from "./icons/GitHub.astro"
+import Grafana from "./icons/Grafana.astro"
+import Linux from "./icons/Linux.astro"
+import MongoDB from "./icons/MongoDB.astro"
+import MySQL from "./icons/MySQL.astro"
+import NodeJS from "./icons/NodeJS.astro"
+import PHP from "./icons/PHP.astro"
+import StackOverflow from "./icons/StackOverflow.astro"
+import Tailwind from "./icons/Tailwind.astro"
+import Vercel from "./icons/Vercel.astro"
+import VSCode from "./icons/VSCode.astro"
+import Wordpress from "./icons/Wordpress.astro"
+import Laravel from "./icons/Laravel.astro"
+import Atlassian from "./icons/Atlassian.astro"
+
+const stacks = [
+    {
+        name: "JavaScript",
+        class: "dark:bg-yellow-500/40 bg-yellow-500 text-white",
+        icon: JS,
+    },
+    {
+        name: "HTML",
+        class: "bg-orange-900 text-white",
+        icon: HTML,
+    },
+    {
+        name: "CSS",
+        class: "bg-sky-900 text-white",
+        icon: CSS,
+    },
+    {
+        name: "TypeScript",
+        class: "bg-sky-900 text-white",
+        icon: TS,
+    },
+    {
+        name: "Express.js",
+        class: "bg-gray-700 text-white",
+        icon: ExpressJS,
+    },
+    {
+        name: "React",
+        class: "bg-sky-900 text-white",
+        icon: React,
+    },
+    {
+        name: "Astro",
+        class: "bg-purple-900 text-white",
+        icon: AstroJS,
+    },
+    {
+        name: "Arduino",
+        class: "bg-teal-900 text-white",
+        icon: Arduino,
+    },
+    {
+        name: "Figma",
+        class: "dark:bg-gray-300/30 bg-slate-800 text-white",
+        icon: Figma,
+    },
+    {
+        name: "JSON Web Token",
+        class: "dark:bg-gray-300/30 bg-slate-800 text-white",
+        icon: JWT,
+    },
+    {
+        name: "Firebase",
+        class: "bg-yellow-900 text-white",
+        icon: Firebase,
+    },
+    {
+        name: "Amazon Web Services",
+        class: "bg-yellow-900 text-white",
+        icon: AWS,
+    },
+    {
+        name: "Bash",
+        class: "dark:bg-gray-300/30 bg-slate-800 text-white",
+        icon: Bash,
+    },
+    {
+        name: "Bootstrap",
+        class: "bg-purple-800/50 text-white",
+        icon: Bootstrap,
+    },
+    {
+        name: "Cloudflare",
+        class: "bg-yellow-900 text-white",
+        icon: Cloudflare,
+    },
+    {
+        name: "Docker",
+        class: "bg-blue-900/50 text-white",
+        icon: Docker,
+    },
+    {
+        name: "Git",
+        class: "bg-orange-700/50 text-white",
+        icon: Git,
+    },
+    {
+        name: "GitHub",
+        class: "dark:bg-gray-300/30 bg-slate-800 text-white",
+        icon: GitHub,
+    },
+    {
+        name: "Grafana",
+        class: "bg-yellow-900 text-white",
+        icon: Grafana,
+    },
+    {
+        name: "Linux",
+        class: "dark:bg-yellow-500/40 bg-yellow-500 text-white",
+        icon: Linux,
+    },
+    {
+        name: "MongoDB",
+        class: "bg-green-900 text-white",
+        icon: MongoDB,
+    },
+    {
+        name: "MySQL",
+        class: "bg-gray-900 text-white",
+        icon: MySQL,
+    },
+    {
+        name: "PHP",
+        class: "dark:bg-gray-300/30 bg-slate-800 text-white",
+        icon: PHP,
+    },
+    {
+        name: "Laravel",
+        class: "bg-red-900/50 text-white",
+        icon: Laravel,
+    },
+    {
+        name: "StackOverflow",
+        class: "bg-yellow-900 text-white",
+        icon: StackOverflow,
+    },
+    {
+        name: "Tailwind",
+        class: "bg-[#003159] text-white",
+        icon: Tailwind,
+    },
+    {
+        name: "Vercel",
+        class: "dark:bg-gray-300/30 bg-slate-800 text-white",
+        icon: Vercel,
+    },
+    {
+        name: "VSCode",
+        class: "bg-[#003159] text-white",
+        icon: VSCode,
+    },
+    {
+        name: "Wordpress",
+        class: "bg-cyan-900/70 text-white",
+        icon: Wordpress,
+    },
+    {
+        name: "Atlassian",
+        class: "bg-blue-900/50 text-white",
+        icon: Atlassian,
+    }
+]
+---
+
+
+<div class="flex flex-col items-center justify-center gap-8 text-gray-700 dark:text-gray-300 md:flex-row">
+    <ul class="flex flex-row flex-wrap gap-3">
+        {stacks.map(({ name, class: customClass, icon: Icon }) => (
+            <li>
+                <span class={`flex items-center justify-center gap-x-2 rounded-full text-base ${customClass} py-1 px-3 w-max`} >
+                    <Icon class="size-7" />
+                    {name}
+                </span>
+            </li>
+        ))}
+    </ul>
+</div>

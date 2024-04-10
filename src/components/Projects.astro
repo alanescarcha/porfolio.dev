@@ -1,11 +1,95 @@
 ---
 import GitHub from "./icons/GitHub.astro"
+import HTML from "./icons/HTML.astro"
+import CSS from "./icons/CSS.astro"
+import JS from "./icons/JS.astro"
+import Arduino from "./icons/Arduino.astro"
+import React from "./icons/React.astro"
+import Wordpress from "./icons/Wordpress.astro"
+import Photoshop from "./icons/Photoshop.astro"
+import Premiere from "./icons/Premiere.astro"
+import ExpressJS from "./icons/ExpressJS.astro"
+import NodeJS from "./icons/NodeJS.astro"
+import MongoDB from "./icons/MongoDB.astro"
+import AstroJS from "./icons/AstroJS.astro"
+import Vercel from "./icons/Vercel.astro"
+import Figma from "./icons/Figma.astro"
 import NextJS from "./icons/NextJS.astro"
 import Tailwind from "./icons/Tailwind.astro"
 import Link from "./icons/Link.astro"
 import LinkButton from "./LinkButton.astro"
 
 const TAGS = {
+  HTML: {
+    name: "HTML",
+    class: "bg-orange-900 text-white",
+    icon: HTML,
+  },
+  CSS: {
+    name: "CSS",
+    class: "bg-sky-900 text-white",
+    icon: CSS,
+  },
+  JS: {
+    name: "JavaScript",
+    class: "dark:bg-yellow-500/40 bg-yellow-500 text-white",
+    icon: JS,
+  },
+  ARDUINO: {
+    name: "Arduino",
+    class: "bg-teal-900 text-white",
+    icon: Arduino,
+  },
+  REACT: {
+    name: "React Native",
+    class: "bg-sky-900 text-white",
+    icon: React,
+  },
+  WORDPRESS: {
+    name: "WordPress",
+    class: "bg-cyan-900/70 text-white",
+    icon: Wordpress,
+  },
+  PHOTOSHOP: {
+    name: "Photoshop",
+    class: "bg-blue-800/50 text-white",
+    icon: Photoshop,
+  },
+  PREMIERE: {
+    name: "Premiere",
+    class: "bg-violet-900 text-white",
+    icon: Premiere,
+  },
+  EXPRESS: {
+    name: "Express.js",
+    class: "bg-gray-700 text-white",
+    icon: ExpressJS,
+  },
+  NODEJS: {
+    name: "Node.js",
+    class: "bg-green-900 text-white",
+    icon: NodeJS,
+  },
+  MONGODB: {
+    name: "MongoDB",
+    class: "bg-green-900 text-white",
+    icon: MongoDB,
+  },
+  ASTRO: {
+    name: "Astro",
+    class: "bg-purple-900 text-white",
+    icon: AstroJS,
+  },
+  VERCEL: {
+    name: "Vercel",
+    class: "dark:bg-gray-300/30 bg-slate-800 text-white",
+    icon: Vercel,
+  },
+  FIGMA: {
+    name: "Figma",
+    class: "dark:bg-gray-300/30 bg-slate-800 text-white",
+    icon: Figma,
+  },
   NEXT: {
     name: "Next.js",
     class: "bg-black text-white",
@@ -19,72 +103,122 @@ const TAGS = {
 }
 const PROJECTS = [
   {
-    title: "SVGL - A beautiful library with SVG logos",
+    title: "VexyHost - Landing Page",
     description:
-      "Biblioteca de logos SVG de las marcas más populares. +10k visitas al mes. +2K svgs descargados. Creado desde cero con Next.js, React y Tailwind CSS.",
-    link: "https://svgl.vercel.app/",
-    github: "https://github.com/pheralb/svgl",
-    image: "/projects/svgl.webp",
-    tags: [TAGS.NEXT, TAGS.TAILWIND],
+      "Hace poco actualicé la landing page de mi emprendimiento, anteriormente usaba WordPress, pero decidí rehacer todo desde 0 y cambiar el stack para usar Astro, Alpinejs, TailwindCSS, Partytown y Vercel. Este cambió aumentó el rendimiento del sitio web, mejoró el SEO y sobre todo me permite agregar servicios, planes y páginas nuevas de forma mucho más sencilla, también pude implementar diferentes idiomas y conversiones de monedas con el sistema i18n de Astro.",
+    link: "https://vexyhost.com/",
+    image: "https://i.imgur.com/foAc02W.png",
+    tags: [TAGS.ASTRO, TAGS.NODEJS, TAGS.HTML, TAGS.CSS, TAGS.JS, TAGS.TAILWIND, TAGS.VERCEL],
   },
   {
-    title: "AdventJS - Retos de programación con JavaScript y TypeScript",
+    title: "VexyHost - Minecraft Server Jars",
     description:
-      "Plataforma gratuita con retos de programación. Más de 1 millón de visitas en un mes. +50K retos completados. Creada desde cero con Next.js, React y Tailwind CSS.",
-    link: "https://adventjs.dev",
-    image: "/projects/adventjs.webp",
-    tags: [TAGS.NEXT, TAGS.TAILWIND],
+      "Algunos de mis clientes de VexyHost necesitaban descargar diferentes versiones de archivos JAR para servidores del juego Minecraft. Por lo que cree un sitio web público donde cualquiera puede ver las categorías y las distintas versiones del juego para poder descargar el archivo ejecutable Java del servidor. Este proyecto hace uso de la API que desarrolle anteriormente para el Staff Dashboard, desde ese dashboard subo las nuevas versiones.",
+    link: "https://jars.vexyhost.com/",
+    image: "https://i.imgur.com/Mq1v4XG.png",
+    tags: [TAGS.ASTRO, TAGS.NODEJS, TAGS.EXPRESS, TAGS.MONGODB, TAGS.HTML, TAGS.JS, TAGS.TAILWIND, TAGS.VERCEL],
   },
+  {
+    title: "IP-KVM basado en Raspberry Pi",
+    description:
+      "Para los servidores de VexyHost que tengo en Mendoza necesitaba poder controlarlos de forma remota cuando les hacía mantenimiento, acciones como apagar, reiniciar o encender sin tener que estar en el lugar. Necesitaba ver la pantalla desde un sitio web, poder tener entrada de teclado y mouse, buscaba una forma de administrar todo esto desde un sitio web y de forma remota. El proyecto PiKVM era ideal para esto, pero no se conseguía en Argentina e importarlo era muy caro, por lo que arme uno casero en una placa PCB junto a una Raspberry Pi, Arduino, conectores y otros componentes de electrónica.",
+    link: "https://github.com/alanescarcha/pikvm",
+    more: "https://imgur.com/a/om2y8T7",
+    image: "https://i.imgur.com/9z2AOg0.jpeg",
+    tags: [TAGS.ARDUINO],
+  },
+  {
+    title: "VexyHost - Staff Dashboard",
+    description:
+      "Para mi emprendimiento de hosting VexyHost, necesitaba un panel en donde gestionar todo lo interno, como tickets, listas de archivos, pre-instalaciones, registros y accesos. Entonces me decidí a crear un dashboard que en el back-end funciona con una API REST externa también creada por mí y se comunica tanto el front-end como el back-end para mostrar los datos necesarios y realizar tareas CRUD. La API también está integrada en otros paneles que usamos y en cada servidor que tenemos, esto para registrar logs de cada servidor como intentos de accesos denegados o cualquier tipo de ataque.",
+    more: "https://imgur.com/a/KqsTFLy",
+    image: "https://i.imgur.com/1b9VfMC.png",
+    tags: [TAGS.NODEJS, TAGS.EXPRESS, TAGS.MONGODB, TAGS.HTML, TAGS.JS, TAGS.TAILWIND],
+  },
+  {
+    title: "VIPER 3D - Impresiones 3D",
+    description:
+      "Mi primer emprendimiento, uno de los favoritos que tuve en 2022, realizaba impresiones 3D con envíos a toda la Argentina, aprendí mucho sobre logística de envíos e-commerce tanto con Mercado Libre como con cadetería, también como diseñar en Fusion 360 y vender los productos en las redes sociales.",
+    link: "https://web.archive.org/web/20220608214057/https://viper3d.com.ar/",
+    more: "https://www.instagram.com/viper3d_/",
+    image: "https://i.imgur.com/0zyNsJ5.png",
+    tags: [TAGS.WORDPRESS, TAGS.PHOTOSHOP, TAGS.PREMIERE],
+  },
+  {
+    title: "Smart Pillbox - Pastillero inteligente",
+    description:
+      "El proyecto trata sobre un pastillero inteligente, el cual funciona junto con una aplicación móvil. El usuario desde la app puede programar los horarios de sus pastillas y saber cuando fueron tomadas, además de la notificación de la app, el producto está impreso con una impresora 3D, tiene componentes de Arduino, Bluetooth y posee un buzzer o alarma que notifica al usuario que debe tomar una pastilla y alertar al usuario en el caso de que se olvide el pastillero al detectar que el mismo está lejos del celular. El proyecto fue realizado en 2021 como trabajo final en 5to año de la Secundaria Técnica San Jose junto a 2 amigos.",
+    link: "https://smart-pillbox-web.vercel.app/",
+    github: "https://github.com/alanescarcha/smart-pillbox-app",
+    more: "https://github.com/alanescarcha/smart-pillbox-app/blob/main/README.md",
+    image: "https://github.com/alanescarcha/smart-pillbox-app/raw/main/photo_4949558997137075446_y.jpg",
+    tags: [TAGS.ARDUINO, TAGS.REACT, TAGS.HTML, TAGS.CSS, TAGS.JS, TAGS.EXPRESS, TAGS.FIGMA],
+  },
+  {
+    title: "Frontend Mentor - IP Address Tracker",
+    description:
+      "El proyecto consistía en desarrollar una aplicación web de seguimiento de direcciones IP, obteniendo datos a través de una API y mostrar la ubicación geográficamente. Este proyecto fue realizado en la comunidad de Mentor Frontend en 2021.",
+    link: "https://ip-address-tracker-master-mocha.vercel.app/",
+    github: "https://github.com/alanescarcha/ip-address-tracker-master",
+    image: "https://github.com/alanescarcha/ip-address-tracker-master/raw/main/design/desktop-preview.jpg",
+    tags: [TAGS.HTML, TAGS.CSS, TAGS.JS, TAGS.VERCEL],
+  }
 ]
 ---
 
 <div class="flex flex-col gap-y-16">
   {
-    PROJECTS.map(({ image, title, description, tags, link, github }) => (
-    <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
-  <div class="w-full md:w-1/2">
-    <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
-      <img alt="Recién llegado vs 5 años en Nueva Zelanda" class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105" loading="lazy" src={image} />
-    </div>
-  </div>
+    PROJECTS.map(({ image, title, description, tags, link, more, github }) => (
+      <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
+        <div class="w-full md:w-1/2">
+          <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
+            <img class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:group-hover:scale-110" src={image} />
+          </div>
+        </div>
+      
+        <div class="w-full md:w-1/2 md:max-w-lg">
+          <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">
+            {title}
+          </h3>
+          <div class="flex flex-wrap mt-2">
+            <ul class="flex flex-row flex-wrap mb-2 gap-2">
+              {tags.map((tag) => (
+                <li>
+                  <span
+                    class={`flex items-center justify-center gap-x-2 rounded-full text-base ${tag.class} py-1 px-3 w-max`}
+                  >
+                    <tag.icon class="size-5" />
+                    {tag.name}
+                  </span>
+                </li>
+              ))}
+            </ul>
+            
+            <div class="mt-2 text-gray-700 dark:text-gray-400">{description}</div>
+            <footer class="flex items-end justify-start mt-4 gap-x-4">
+                {github && (
+                  <LinkButton href={github}>
+                    <GitHub class="size-6" />
+                    Code
 
-  <div class="w-full md:w-1/2 md:max-w-lg">
-    <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">
-      {title}
-    </h3>
-    <div class="flex flex-wrap mt-2">
-      <ul class="flex flex-row mb-2 gap-x-2">
-          {tags.map((tag) => (
-            <li>
-              <span
-                class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
-              >
-                <tag.icon class="size-4" />
-                {tag.name}
-              </span>
-            </li>
-          ))}
-        </ul>
-
-      <div class="mt-2 text-gray-700 dark:text-gray-400">{description}</div>
-      <footer class="flex items-end justify-start mt-4 gap-x-4">
-          {github && (
-            <LinkButton href={github}>
-              <GitHub class="size-6" />
-              Code
-              
-            </LinkButton>
-          )}
-          {link && (
-            <LinkButton href={link}>
-              <Link class="size-4" />
-              Preview
-            </LinkButton>
-          )}
-        </footer>
-    </div>
-  </div>
-</article>
+                  </LinkButton>
+                )}
+                {more && (
+                  <LinkButton href={more}>
+                    <Link class="size-4" />
+                    Photos & Videos
+                  </LinkButton>
+                )}
+                {link && (
+                  <LinkButton href={link}>
+                    <Link class="size-4" />
+                    Preview
+                  </LinkButton>
+                )}
+              </footer>
+          </div>
+        </div>
+      </article>
     ))
   }
 </div>
