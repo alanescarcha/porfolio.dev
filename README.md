@@ -2,7 +2,7 @@
 
 <div align="center">
 <a href="https://porfolio.dev/">
-<img src="./public/porfolio.webp">
+<img src="https://github.com/midudev/porfolio.dev/raw/main/public/porfolio.webp">
 </a>
 <p></p>
 </div>
